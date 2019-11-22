@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Category from "/.category";
+import Category from "./category";
+import "./categories.css";
 
 class Categories extends Component {
     state = { 
@@ -29,10 +30,10 @@ class Categories extends Component {
 
     render() { 
         return(
-            <div>
+            <div className = "wrapper">
                 {this.state.baseCategories.map( category => 
                 <Category key={category.id}  category = {category} /> )}
-            </div>  
+            </div>
         );       
 }
 }
